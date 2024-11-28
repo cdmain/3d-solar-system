@@ -11,7 +11,7 @@ controls.enableDamping = true;
 controls.dampingFactor = 0.25;
 controls.enableZoom = true;
 
-// Background of stars after loading 
+// Background
 const loader = new THREE.TextureLoader();
 const starsTexture = loader.load('img/stars.jpg');
 scene.background = starsTexture;
@@ -160,13 +160,13 @@ function createPlanet(size, textureUrl, name, hasRing = false) {
 // Loading Screen
 window.onload = function() {
   const loadingScreen = document.getElementById('loading-screen');
-  loadingScreen.style.backgroundImage = ('img/background.jpg');
-  const loadingMessage = `Welcome to a 3D Solar System Simulation`;
+  loadingScreen.style.backgroundImage = 'img/background.jpg';
+  const loadingMessage = "3D Solar System Simulation";
   document.getElementById('loading-message').innerHTML = loadingMessage;
   setTimeout(() => {
     loadingScreen.classList.add('fade-out');
     loadingScreen.addEventListener('transitionend', () => {
       loadingScreen.remove();
     });
-  }, 1300); // Adjust the delay as needed
+  }, 3000); // Adjust the delay as needed
 };
