@@ -18,7 +18,7 @@ scene.background = starsTexture;
 
 // Create celestial bodies
 const sunGeometry = new THREE.SphereGeometry(8, 32, 32);
-const sunMaterial = new THREE.MeshBasicMaterial({ map: loader.load(img/sun.jpg) });
+const sunMaterial = new THREE.MeshBasicMaterial({ map: loader.load('/img/sun.jpg') });
 const sun = new THREE.Mesh(sunGeometry, sunMaterial);
 scene.add(sun);
 
@@ -160,7 +160,7 @@ function createPlanet(size, textureUrl, name, hasRing = false) {
 // Loading Screen
 window.onload = function() {
   const loadingScreen = document.getElementById('loading-screen');
-  loadingScreen.style.backgroundImage = "url('/img/background.jpg')";
+  loadingScreen.style.backgroundImage = ('/img/background.jpg');
   const loadingMessage = `Welcome to a 3D Solar System Simulation`;
   document.getElementById('loading-message').innerHTML = loadingMessage;
   setTimeout(() => {
