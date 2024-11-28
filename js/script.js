@@ -18,11 +18,11 @@ scene.background = starsTexture;
 
 // Create celestial bodies
 const sunGeometry = new THREE.SphereGeometry(8, 32, 32);
-const sunMaterial = new THREE.MeshBasicMaterial({ map: loader.load('img/sun.jpg') });
+const sunMaterial = new THREE.MeshBasicMaterial({ map: loader.load(img/sun.jpg) });
 const sun = new THREE.Mesh(sunGeometry, sunMaterial);
 scene.add(sun);
 
-const mercury = createPlanet(2, 'img/mercury.jpg', "mercury");
+const mercury = createPlanet(2, img/mercury.jpg, "mercury");
 const venus = createPlanet(3.8, 'img/venus.jpg', "venus");
 const earth = createPlanet(4, 'img/earth.jpg', "earth");
 const mars = createPlanet(2, 'img/mars.jpg', "mars");
