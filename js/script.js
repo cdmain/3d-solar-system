@@ -11,25 +11,25 @@ controls.enableDamping = true;
 controls.dampingFactor = 0.25;
 controls.enableZoom = true;
 
-// Background
+// Background of the galaxy
 const loader = new THREE.TextureLoader();
-const starsTexture = loader.load('img/stars.jpg');
+const starsTexture = loader.load('https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/stars.jpg');
 scene.background = starsTexture;
 
-// Create celestial bodies
+// Create celestial bodies           
 const sunGeometry = new THREE.SphereGeometry(8, 32, 32);
-const sunMaterial = new THREE.MeshBasicMaterial({ map: loader.load('img/sun.jpg') });
+const sunMaterial = new THREE.MeshBasicMaterial({ map: loader.load('https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/sun.jpg') });
 const sun = new THREE.Mesh(sunGeometry, sunMaterial);
 scene.add(sun);
 
-const mercury = createPlanet(2, 'img/mercury.jpg', "mercury");
-const venus = createPlanet(3.8, 'img/venus.jpg', "venus");
-const earth = createPlanet(4, 'img/earth.jpg', "earth");
-const mars = createPlanet(2, 'img/mars.jpg', "mars");
-const jupiter = createPlanet(12, 'img/jupiter.jpg', "jupiter");
-const saturn = createPlanet(10, 'img/saturn.jpg', "saturn", true); // Saturn has a ring
-const uranus = createPlanet(7, 'img/uranus.jpg', "uranus");
-const neptune = createPlanet(6.5, 'img/neptune.jpg', "neptune");
+const mercury = createPlanet(2, 'https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/mercury.jpg', "mercury");
+const venus = createPlanet(3.8, 'https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/venus.jpg', "venus");
+const earth = createPlanet(4, 'https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/earth.jpg', "earth");
+const mars = createPlanet(2, 'https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/mars.jpg', "mars");
+const jupiter = createPlanet(12, 'https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/jupiter.jpg', "jupiter");
+const saturn = createPlanet(10, 'https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/saturn.jpg', "saturn", true); // Saturn has a ring
+const uranus = createPlanet(7, 'https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/uranus.jpg', "uranus");
+const neptune = createPlanet(6.5, 'https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/neptune.jpg', "neptune");
 
 // Set initial positions (orbital radii from the Sun)
 const orbits = [
@@ -67,7 +67,7 @@ camera.position.y = 30;
 
 // Variables for UI control
 let orbitSpeedFactor = 0.01;
-let rotationSpeedFactor = 0.001;
+let rotationSpeedFactor = 0.01;
 let focusedPlanet = null;
 
 // UI Elements
@@ -143,7 +143,7 @@ function createPlanet(size, textureUrl, name, hasRing = false) {
   if (hasRing) {
     const ringGeometry = new THREE.RingGeometry(size + 1, size + 5, 32);
     const ringMaterial = new THREE.MeshBasicMaterial({
-      map: loader.load('img/saturn_ring.png'),
+      map: loader.load('https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/saturn_ring.png'),
       side: THREE.DoubleSide,
       transparent: true,
       opacity: 0.8
@@ -160,7 +160,7 @@ function createPlanet(size, textureUrl, name, hasRing = false) {
 // Loading Screen
 window.onload = function() {
   const loadingScreen = document.getElementById('loading-screen');
-  loadingScreen.style.backgroundImage = 'img/background.jpg';
+  loadingScreen.style.backgroundImage = 'https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/background.jpg';
   const loadingMessage = "3D Solar System Simulation";
   document.getElementById('loading-message').innerHTML = loadingMessage;
   setTimeout(() => {
