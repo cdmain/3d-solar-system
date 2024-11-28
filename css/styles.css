@@ -3,14 +3,35 @@ body {
     overflow: hidden;
   }
 
-  #controls {
+  .controls {
     position: absolute;
     top: 10px;
     left: 10px;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
+    background: rgba(202, 202, 202, 0.9);
     border-radius: 5px;
+    list-style: none; 
+    padding: 10px; 
+    margin: 5px;
+  }
+
+  .controls:hover {
+    box-shadow: 0 3px 10px rgb(0, 166, 255);
+    border: 1px solid rgb(0, 166, 255);
+    background: rgb(219, 219, 219);
+    padding: 11px;
+  }
+
+  .orbitSpeedLabel {
+    margin-right: 61px;
+  }
+
+  .rotationSpeedLabel {
+    margin-right: 40px;
+  }
+
+  .focusPlanetLabel {
+    margin-right: 40px;
   }
 
   #loading-screen {
@@ -19,7 +40,6 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
-    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: top-center;
@@ -31,7 +51,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     color: white;
-    margin: 20px;
+    margin: 10px;
   }
 
   #loading-spinner {
