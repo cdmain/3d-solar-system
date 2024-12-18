@@ -159,10 +159,10 @@ function createPlanet(size, textureUrl, name, hasRing = false) {
 
 // Loading Screen
 window.onload = function() {
-  const loadingScreen = document.getElementById('loading-screen');
+  const loadingScreen = document.querySelector('.loadingScreen');
   loadingScreen.style.backgroundImage = 'https://raw.githubusercontent.com/cdmain/cdmain.github.io/main/img/background.jpg';
   const loadingMessage = "3D Solar System Simulation";
-  document.getElementById('loading-message').innerHTML = loadingMessage;
+  document.querySelector('.loadingMessage').innerHTML = loadingMessage;
   setTimeout(() => {
     loadingScreen.classList.add('fade-out');
     loadingScreen.addEventListener('transitionend', () => {

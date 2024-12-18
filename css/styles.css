@@ -34,7 +34,7 @@ body {
     margin-right: 40px;
   }
 
-  #loading-screen {
+  .loadingScreen {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -47,14 +47,14 @@ body {
     text-align: center;
   }
 
-  #loading-message {
+  .loadingMessage {
     font-size: 20px;
     font-weight: bold;
     color: white;
     margin: 10px;
   }
 
-  #loading-spinner {
+  .loadingSpinner {
     border: 8px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     border-top: 8px solid white;
